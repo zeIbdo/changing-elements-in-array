@@ -44,67 +44,56 @@ namespace changing_elements_in_array
             #endregion
 
             #region daxil edilen ededler deyisilme
-            //int[] ints = { 1, 2, 3 };
-            //int idx = 0;
-            //int num1idx = 0;
-            //int num2idx = 0;
-            //bool ent1 = false;
-            //bool ent2 = false;
-            //while (idx < ints.Length)
-            //{
-            //    Console.WriteLine(ints[idx]);
-            //    idx++;
-            //}
-            //idx = 0;
-            //Console.WriteLine("verilen arraydeki deyismek istediyiniz 2 elementi sirayla daxil edin: ");
-            //int number1 = int.Parse(Console.ReadLine());
-            //int number2 = int.Parse(Console.ReadLine());
-            //while (idx < ints.Length)
-            //{
-            //    if (ints[idx] == number1)
-            //    {
-            //        num1idx = idx;
-            //        ent1 = true;
-            //        break;
-            //    }
-            //    idx++;
-            //}
-            //idx = 0;
-            //while (idx < ints.Length)
-            //{
-            //    if (ints[idx] == number2)
-            //    {
-            //        num2idx = idx;
-            //        ent2 = true;
-            //        break;
-            //    }
-            //    idx++;
-            //}
-            //idx = 0;
-            //if (ent1 == true && ent2 == true) { Console.WriteLine("2 ededde arrayde var"); }
-            //else { Console.WriteLine("ededlerden biri ve ya ikisi yoxdur"); }
-            //while (idx < ints.Length)
-            //{
-            //    if (ints[idx] == number1)
-            //    {
-            //        ints[idx] = number2;
-            //        //number1 = number2; 
-            //        //number2 = ints[idx];
-            //        //break;
-            //    }
-            //    else if (ints[idx] == number2)
-            //    {
-            //        ints[idx] = number1;
-            //    }
-            //    idx++;
-            //}
-            //idx = 0;
-            //Console.WriteLine("array after change:");
-            //while (idx < ints.Length)
-            //{
-            //    Console.WriteLine(ints[idx]);
-            //    idx++;
-            //}
+            int[] ints = { 1, 2, 3, 4 };
+            int idx = 0;
+            int num1idx = 0;
+            int num2idx = 0;
+            bool ent1 = false;
+            bool ent2 = false;
+            while (idx < ints.Length)
+            {
+                Console.WriteLine(ints[idx]);
+                idx++;
+            }
+            idx = 0;
+            Console.WriteLine("verilen arraydeki deyismek istediyiniz 2 elementi sirayla daxil edin: ");
+            int number1 = int.Parse(Console.ReadLine());
+            int number2 = int.Parse(Console.ReadLine());
+            while (idx < ints.Length)
+            {
+                if (ints[idx] == number1)
+                {
+                    num1idx = idx;
+                    ent1 = true;
+                    break;
+                }
+                idx++;
+            }
+            idx = 0;
+            while (idx < ints.Length)
+            {
+                if (ints[idx] == number2)
+                {
+                    num2idx = idx;
+                    ent2 = true;
+                    break;
+                }
+                idx++;
+            }
+            idx = 0;
+            if (ent1 == true && ent2 == true) { Console.WriteLine("2 ededde arrayde var"); }
+            else { Console.WriteLine("ededlerden biri ve ya ikisi yoxdur"); }
+            if (ent1 != false && ent2 != false)
+            {
+                ints[num1idx] = number2;
+                ints[num2idx] = number1;
+            }                   
+            Console.WriteLine("array after change:");
+            while (idx < ints.Length)
+            {
+                Console.WriteLine(ints[idx]);
+                idx++;
+            }
             #endregion
 
 
